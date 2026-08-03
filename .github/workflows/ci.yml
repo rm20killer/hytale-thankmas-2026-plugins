@@ -28,8 +28,7 @@ jobs:
           node-version: 22
       - run: npx --yes @commitlint/cli --from=origin/main --to=HEAD --verbose
         if: github.event_name == 'pull_request'
-      - run: npx --yes @commitlint/cli --from=HEAD~1 --to=HEAD --verbose
-        if: github.event_name == 'push'
+      - run: npx --yes @commitlint/cli --from=$(git rev-list --max-parents=0 HEAD) --to=HEAD --verbose
 
   fmt:
     runs-on: ubuntu-latest
@@ -40,5 +39,5 @@ jobs:
           distribution: temurin
           java-version: 25
       - run: |
-          curl -sSLo ktfmt.jar https://repo1.maven.org/maven2/com/facebook/ktfmt/0.61/ktfmt-0.61-jar-with-dependencies.jar
+          curl -sSLo ktfmt.jar https://repo1.maven.org/maven2/com/facebook/ktfmt/0.61/ktfmt-0.61-with-dependencies.jar
           java -jar ktfmt.jar --kotlinlang-style --set-exit-if-changed $(find . -name '*.kt' -not -path './.gradle/*' -not -path '*/build/*')
