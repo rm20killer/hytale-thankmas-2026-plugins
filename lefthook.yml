@@ -1,0 +1,10 @@
+commit-msg:
+  commands:
+    commitlint:
+      run: commitlint --edit {1}
+
+pre-commit:
+  commands:
+    ktfmt:
+      glob: "*.kt"
+      run: ktfmt --kotlinlang-style --set-exit-if-changed {staged_files}

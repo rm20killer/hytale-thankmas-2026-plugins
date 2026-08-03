@@ -1,0 +1,11 @@
+.gradle
+.kotlin
+build
+run
+*.iml
+.direnv
+gradle.properties.local
+.idea
+*.ipr
+*.iws
+out/
