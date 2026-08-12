@@ -10,3 +10,4 @@ plugins {
 
 rootProject.name = "hytale-thankmas-2026-plugins"
 include(":plugins:plugin-one", ":plugins:plugin-two", ":plugins:hytale-x-tiltify")
+
