@@ -1,0 +1,3 @@
+[submodule "plugins/thankmas-vault"]
+	path = plugins/thankmas-vault
+	url = https://github.com/HytaleThankmas/thankmas-vault
