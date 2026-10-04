@@ -1,3 +1,6 @@
 [submodule "plugins/thankmas-vault"]
 	path = plugins/thankmas-vault
 	url = https://github.com/HytaleThankmas/thankmas-vault
+[submodule "plugins/hytale-x-tiltify"]
+	path = plugins/hytale-x-tiltify
+	url = https://github.com/HytaleThankmas/hytale-x-tiltify
